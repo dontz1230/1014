@@ -52,7 +52,7 @@ export default {
         margin:0;
     }
     .slider {
-        height: 80vh;
+        height: 90vh;
         width: auto;
         background-size: cover!important;
         background-repeat: no-repeat!important;

@@ -32,14 +32,18 @@
             }
         }
     }
+    
 </script>
 
 <style lang="scss" scoped>
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
+
+$MainGreen : rgb(82, 119, 78);
 
 @media (min-width:768px){
     header {  
@@ -70,9 +74,13 @@
 
                     > a {
                         text-decoration: none;
-                        letter-spacing: 3px;
+                        
                         font-weight: bold;
-                        font-size: 14px;
+                        font-size: 1.5rem;
+                        color: $MainGreen;
+                        &:hover {
+                            color:salmon;
+                        }
                     }
                 }
             }

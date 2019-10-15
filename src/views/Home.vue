@@ -1,11 +1,11 @@
 <template>
     <div>
         <my-carousel></my-carousel>
-        <title-text>ABOUT</title-text>
+        <title-text>關於田園</title-text>
         <my-about></my-about>
-        <title-text>DELICACY</title-text>
+        <title-text>美味佳餚</title-text>
         <my-foods></my-foods>
-        <title-text>NEWS</title-text>
+        <title-text>最新資訊</title-text>
         <my-news></my-news>
     </div>
 </template>

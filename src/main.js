@@ -12,7 +12,9 @@ import store from "./store";
 
 /* */
 import Title from './components/reusable/Title.vue'
+import Btn from './components/reusable/Btn.vue'
 Vue.component('title-text', Title);
+Vue.component('btn', Btn);
 
 Vue.config.productionTip = false;
  
