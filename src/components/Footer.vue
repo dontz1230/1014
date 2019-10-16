@@ -6,17 +6,21 @@
             </div>
             <div class="open-content">
                 <div class="open-time">
+                     <div class="when optime">
+                        <p>營業時間</p>
+                        <p>周一 ~ 周五</p>
+                    </div>
                     <div class="lunch optime">
-                        <h2>Lunch</h2>
+                        <p>Lunch</p>
                         <p>11:40~14:00</p>
                     </div>
                     <div class="dinner optime">
-                        <h2>Dinner</h2>
+                        <p>Dinner</p>
                         <p>17:00~20:00</p>
                     </div>
                 </div>
                 <div class="open-info">
-                    <div class="address"><i class="fas fa-home"></i>國立中央大學後門(白鬍子牛排館旁)</div>
+                    <div class="address"><i class="fas fa-home"></i>國立中央大學後門</div>
                     <div class="phone"><i class="fas fa-phone"></i>03-420-3115</div>
                     <div class="facebook">
                         <a href="https://www.facebook.com/LoveTianYuan">
@@ -38,17 +42,22 @@ export default {
 
 <style lang="scss">
     footer {
-        padding: 40px;
+        position: relative;
+        bottom:0;
+        left:0;
+        padding: 40 0 0 0px;
         height: 200px;
         width:100%;
-        border-top: 1px solid rgb(82, 119, 78);
-        margin:auto;
+        background: whitesmoke;
+        box-shadow: 0px -1px 5px rgba(0,0,0,0.25);
+        display: flex;
+        justify-content: center;
+        margin: 40px auto;
+        margin-bottom: 0;
         
         .footer-container {            
             display: grid;
-            grid-gap: 0px;
             grid-template-columns: 1fr 3fr;
-            height: 100%;
             position: relative;
             > .logo {
                 margin: auto;
@@ -62,15 +71,19 @@ export default {
 
                 > .open-time {
                     display: flex;
+                    flex-direction: row;
                     text-align:center;
                     align-items: center;
                     margin-bottom: 10px;
                     > .optime {
                         width:200px;
                         border-right: 1px solid black;
+                        margin: 5px 0;
                     }
                     > .lunch {
-                        border-left: 1px solid black;
+                    }
+                    > .when {
+                         border-left: 1px solid black;
                     }
                 }
 
@@ -90,50 +103,65 @@ export default {
 
     /* mobile edition */
 
-    @media (max-width: 768px){
+    @media screen and (max-width: 768px){
         footer {
-        padding: 40px;
-        height: 200px;
+        position: relative;
+        bottom:0;
+        left:0;
+        padding: 20px 20px 0 20px;
+        height: 30%;
         width:100%;
-        border-top: 1px solid rgb(82, 119, 78);
-        margin:auto;
+        margin: 40px auto;
+        margin-bottom: 0;
         
         .footer-container {            
             display: grid;
             grid-template-columns: 1fr;
             height: 100%;
             position: relative;
+            
             > .logo {
-                margin: auto;
+                margin:0px;
                 text-align: center;
+                padding:0;
                 > img {
                     width:100px;
                 }
             }
             > .open-content {
+                margin:auto;
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
                 justify-content: center;
                 align-items: center;
 
                 > .open-time {
+                    font-size: 0.8rem;
                     display: flex;
+                    flex-direction: column;
                     text-align:center;
                     align-items: center;
                     margin-bottom: 10px;
+                    
                     > .optime {
-                        width:200px;
-                        border-right: 1px solid black;
+                        width: 100%;
+                        border-right: 0px ;
                     }
                     > .lunch {
-                        border-left: 1px solid black;
+                        border-left: 0px ;
+                    } > .when {
+                         border-left: 0px ;
                     }
                 }
 
                 > .open-info {
                     display: flex;
+                    flex-direction: column;
+                    font-size: 0.8rem;
                     width: 100%;        
                     justify-content: center;
+                    align-items: left;
+                    padding-left: 20px;
 
                     > div {
                         margin: 10px;

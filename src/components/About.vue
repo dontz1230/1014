@@ -1,4 +1,5 @@
 <template>
+<div>
     <div class="about">
 
         <div class="about-container">
@@ -29,7 +30,13 @@
             
         </div>
 
+        
+
     </div>
+    <div class="slider">
+  <div class="slider-row"></div>
+</div>
+</div>
 </template>
 
 <script>
@@ -40,10 +47,29 @@ export default {
 
 <style lang="scss" scoped>
 
+/* slider */
+.slider {
+        margin: 80px 0;
+        height: 300px;
+        
+        > .slider-row {
+        
+        height: 300px;
+        background-image: url(https://i.ibb.co/M5r1pJJ/roll.png);
+        background-size: 4565px * 1/2 300px;
+        animation: slide 60s linear infinite;   
+        opacity: 0.7; 
+    }
+    }
+    @keyframes slide {
+    from { background-position-x: 0; }
+    to   { background-position-x: 4565px * 0.5; }
+    }
+/* slider ends */
     .about {
         position: relative;
         width:100%;
-        height:800px;
+        height:700px;
         display: block;
         &::before {
             content: "";

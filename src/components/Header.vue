@@ -9,7 +9,7 @@
         </div>
 
         <ul class="nav-links">
-          <li><router-link to="/">菜單</router-link></li>
+          <li><router-link to="/menu">菜單</router-link></li>
           <li><router-link to="/">故事</router-link></li>
           <li><router-link to="/">食記</router-link></li>
           <li><router-link to="/">加入會員</router-link></li>
@@ -17,7 +17,7 @@
         </ul>
       </nav>
    
-    <div class="menu-toggle" @click="toggleMenu"><i class="fa fa-bars fa-2x"></i></div>
+    <div class="menu-toggle heartBeat animated infinite" @click="toggleMenu"><i class="fa fa-bars fa-2x"></i></div>
   </header>
 
 </template>
@@ -47,7 +47,9 @@ $MainGreen : rgb(82, 119, 78);
 
 @media (min-width:768px){
     header {  
-        position: fixed;
+        position: sticky;
+        top:0;
+        left:0;
         z-index: 99;
         width:100%;
 
@@ -76,7 +78,7 @@ $MainGreen : rgb(82, 119, 78);
                         text-decoration: none;
                         
                         font-weight: bold;
-                        font-size: 1.5rem;
+                        font-size: 1.2rem;
                         color: $MainGreen;
                         &:hover {
                             color:salmon;
@@ -97,10 +99,12 @@ $MainGreen : rgb(82, 119, 78);
 
         > .menu-toggle {
             display: block;
-            top: 2rem;
+            font-size: .8rem;
+            top: calc(5vh / 2);
             right: 1rem;
             position: fixed;
             cursor: pointer;
+            
         }
 
         > nav {
@@ -111,7 +115,12 @@ $MainGreen : rgb(82, 119, 78);
             min-height: 5vh;
             background: whitesmoke;
             box-shadow: 0px 1px 5px rgba(0,0,0,0.25);
-            opacity: 0.85;
+            opacity: 1;
+
+            > .logo img {
+                height:50px;
+                padding: 5px 0;
+            }
           
             > .nav-links {
                 display: none;
@@ -130,7 +139,7 @@ $MainGreen : rgb(82, 119, 78);
                         color: white;
                         letter-spacing: 3px;
                         font-weight: bold;
-                        font-size: 14px;
+                        font-size: 1.5rem
                     }
                 }
             }
@@ -148,12 +157,20 @@ $MainGreen : rgb(82, 119, 78);
                     text-align: center;
                     padding: 20px;
 
+                    &:hover {
+                        transition: all .3s ease-out;
+                        background: salmon;
+                        padding: 30px;
+                    }
+
                     > a {
                         text-decoration: none;
                         color: white;
                         letter-spacing: 3px;
                         font-weight: bold;
-                        font-size: 14px;
+                        font-size: 1rem;
+
+                        
                     }
                 }
             } 

@@ -9,7 +9,9 @@
                 <btn :clickevent="fish" :customClass="focusFish">養生鮭魚</btn>
             </div>
 
+        
                     <div class="menu-container">
+                       
                         <div v-for="(dish,index) in filteredmenu" :key="index" class="single-food">                          
                             <img :src="dish.url" class="food-img">
                                 <div class="food-info">
@@ -21,10 +23,14 @@
                                     </h5>
                                 </div>
                         </div>
-                        <div class="more">完整菜單介紹</div>
+                        
+                        
+                        
+                       
                     </div>
                 
-            
+        
+
         </div>
     </div>
 </template>
@@ -194,7 +200,7 @@ export default {
 }
 
 /* mobile edition */
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
     .foods-container {
         width: calc(100% - 40px);
 
@@ -292,6 +298,8 @@ export default {
             }
         }
     }}}
- 
+
+
+
 
 </style>
