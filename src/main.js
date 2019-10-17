@@ -3,12 +3,20 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 
-/* Vue material */
-// import { MdButton, MdContent, MdTabs } from 'vue-material/dist/components'
+// import VueMaterial from 'element-ui';
+// import firebase from 'firebase'
 
+// import { fb, db } from './views/firebase.js';
+
+/* Vue material */
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.css'
 // Vue.use(MdButton)
 // Vue.use(MdContent)
 // Vue.use(MdTabs)
+// Vue.use(MdDatepicker)
+Vue.use(VueMaterial)
+
 
 /* */
 import Title from './components/reusable/Title.vue'

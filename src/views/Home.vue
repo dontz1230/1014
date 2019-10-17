@@ -18,6 +18,7 @@ import myNews from "../components/News.vue"
 import myMap from "../components/Map.vue"
 
 
+
 export default {
     mounted(){
         const thispage = document.querySelector('.homepage');
