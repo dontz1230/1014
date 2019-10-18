@@ -9,11 +9,11 @@
         </div>
 
         <ul class="nav-links">
-          <li @click="menuClose"><router-link to="/menu">菜單</router-link></li>
-          <li @click="menuClose"><router-link to="/">故事</router-link></li>
-          <li @click="menuClose"><router-link to="/">食記</router-link></li>
-          <li @click="menuClose"><router-link to="/msgboard">留言板</router-link></li>
-          <li @click="menuClose"><router-link to="/reservation">線上訂位</router-link></li>
+          <li><router-link to="/menu">菜單</router-link></li>
+          <li><router-link to="/">故事</router-link></li>
+          <li><router-link to="/">食記</router-link></li>
+          <li><router-link to="/msgboard">留言板</router-link></li>
+          <li><router-link to="/reservation">線上訂位</router-link></li>
         </ul>
       </nav>
    
