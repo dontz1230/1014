@@ -9,11 +9,11 @@
         </div>
 
         <ul class="nav-links">
-          <li><router-link to="/menu">菜單</router-link></li>
-          <li><router-link to="/">故事</router-link></li>
-          <li><router-link to="/">食記</router-link></li>
-          <li><router-link to="/msgboard">留言板</router-link></li>
-          <li><router-link to="/reservation">線上訂位</router-link></li>
+          <li @click="menuClose"><router-link to="/menu">菜單</router-link></li>
+          <li @click="menuClose"><router-link to="/">故事</router-link></li>
+          <li @click="menuClose"><router-link to="/">食記</router-link></li>
+          <li @click="menuClose"><router-link to="/msgboard">留言板</router-link></li>
+          <li @click="menuClose"><router-link to="/reservation">線上訂位</router-link></li>
         </ul>
       </nav>
    
@@ -25,17 +25,22 @@
 <script>
     
     export default {
+        
         methods:{
             toggleMenu(){
                 const menuList = document.querySelector('.nav-links');
-                menuList.classList.toggle('active-links')
+                menuList.classList.toggle('active-links');
+            },
+            menuClose(){
+                const menuList = document.querySelector('.active-links');
+                menuList.classList.remove('active-links');
             }
         }
     }
     
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 * {
     box-sizing: border-box;
@@ -47,6 +52,7 @@ $MainGreen : rgb(82, 119, 78);
 
 @media (min-width:768px){
     header {  
+        overflow: hidden;
         position: sticky;
         top:0;
         left:0;
@@ -76,7 +82,6 @@ $MainGreen : rgb(82, 119, 78);
 
                     > a {
                         text-decoration: none;
-                        
                         font-weight: bold;
                         font-size: 1.2rem;
                         color: $MainGreen;

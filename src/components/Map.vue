@@ -67,7 +67,7 @@ export default {
         border: 1px solid #8b8b8b;
         border-radius: 10px;
         overflow: hidden;
-        margin: 60px auto;
+        margin: auto;
     }
     .map-content {
         text-align: center;
@@ -88,7 +88,7 @@ export default {
         border: 1px solid #8b8b8b;
         border-radius: 10px;
         overflow: hidden;
-        margin: 60px auto;
+        margin: 0 auto;
     }
 }
 

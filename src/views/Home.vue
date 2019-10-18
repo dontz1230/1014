@@ -23,10 +23,10 @@ export default {
     mounted(){
         const thispage = document.querySelector('.homepage');
         thispage.style.opacity = 0;
-        thispage.style.transition = 'all 1s ease-in';
+        thispage.style.transition = 'all 1s linear';
         setTimeout(() => {
-            thispage.style.opacity = 0.8;
-        },500)
+            thispage.style.opacity = 1;
+        },1000)
     },
     components:{
         myCarousel,

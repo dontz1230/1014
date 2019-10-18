@@ -21,11 +21,11 @@
     .titleBox {
         overflow: hidden;
         position: relative;
-        margin: 60px auto;
+        margin: auto;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        padding: 10px;
+        padding: 60px;
         max-width: 1080px;
         align-items: center;
 
@@ -47,9 +47,10 @@
     
      .textArea {
         display: flex;
+        box-sizing: border-box;
         justify-content: center;
         align-items: center;
-        padding: 5px 40px;
+        padding: 10px 40px;
         text-align: center;
         align-self: center;
         border-top:1px solid rgb(107, 86, 86);
@@ -57,7 +58,7 @@
         letter-spacing: 8px;
 
         > span {
-            font-size: 2.5rem;
+            font-size: 2rem;
             padding: 0 5px;
             color:rgb(107, 86, 86);
         }
@@ -66,7 +67,7 @@
     @media screen and (max-width:768px) {
         .titleBox {
         position: relative;
-        margin: 30px auto;
+        margin: auto;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
