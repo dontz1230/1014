@@ -119,6 +119,7 @@ export default {
             z-index:3;
             writing-mode: vertical-lr;
             text-orientation: mixed;
+            animation: textAnime 3s infinite ease-out;
 
             > h1 {
                 color:white;
@@ -129,14 +130,12 @@ export default {
 
     .reserve-box {
         z-index:4;
-        height:500px;
         position: relative;
         background-color:white;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0;
-        overflow: hidden;
+        padding: 0 0 40px 0;
         margin: 0;
         
        > .reserve-content { 

@@ -2,11 +2,12 @@
     <div class="fullmenu-container">
         
         <section class="top">
+            
             <div class="topimg">
                 <img :src="require('../assets/img/fullmenu/top.jpg')" alt="">
             </div>
             <div class="toptext">
-               <h1>菜單adasddadads</h1>
+              <my-weather></my-weather>
             </div>
             <a class="scrollbtn" @click.prevent="scrolldown">
                 </a>
@@ -50,6 +51,7 @@ import food04 from '../assets/img/fullmenu/panfried.jpg'
 import food05 from '../assets/img/fullmenu/nuggets.jpg'
 import food06 from '../assets/img/fullmenu/tofu.jpg'
 import food07 from '../assets/img/fullmenu/cheese.jpg'
+import myWeather from '../components/Weather.vue'
 
 export default {
     mounted(){
@@ -59,6 +61,9 @@ export default {
         setTimeout(() => {
             thispage.style.opacity = 0.8;
         },500)
+    },
+    components:{
+        myWeather
     },
     data(){
         return {
@@ -113,6 +118,7 @@ export default {
 </script>
 <style lang="scss">
 
+@media (min-width: 768px) {
     .fullmenu-container {
 
         .menus {
@@ -205,21 +211,19 @@ export default {
      .toptext {
             text-align: center;
             position: absolute;
-            top:25%;
-            z-index:3;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            animation: typer 5s infinite ease;
+            top:25vh;
+            z-index:4;
+            animation: weatherAPI 2s infinite ease;
             ;
-            h1 {
-                color:white
-            }
+            
         }
 
-        @keyframes typer {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+        @keyframes weatherAPI {
+    0% { transform: scale(1); }
+    50%   { transform: scale(1.1); }
+    100%   { transform: scale(1); }
     }
+}
 
 
 /* MOBILE */
@@ -269,17 +273,59 @@ export default {
         
     }
     
+     .top {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height:50vh;
+            overflow: hidden;
+
+            .topimg {
+                position: relative;
+                overflow: hidden;
+                height:100%;
+                width: 100%;
+                    &::before {
+                    content: '';
+                    position: absolute;
+                    z-index:2;
+                    top:0;
+                    left:0;
+                    width:100%;
+                    height:100%;
+                    background: rgba(0,0,0,0.3);
+                }
+
+            > img {
+                position: absolute;
+                left: -100%;
+                right: -100%;
+                bottom: 0;
+                margin: auto;
+                width:100%;
+                height:100%;           
+            }
+        }
+            }
+    }
+    
      .toptext {
             text-align: center;
             position: absolute;
-            top:25%;
-            z-index:3;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            ;
-            h1 {
-                color:white
-            }
+            height: 100%;
+            width:100%;
+            top:15vh;
+            z-index:4;
+            animation: weatherAPI 2s infinite ease;
+            color:white;
+            
         }
-}
+
+        @keyframes weatherAPI {
+        0% { transform: scale(0.9); }
+        50%   { transform: scale(1); }
+        100%   { transform: scale(0.9); }
+    }
 </style>

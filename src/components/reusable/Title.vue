@@ -71,7 +71,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        padding: 10px;
+        padding: 25px;
         width: calc(80vw);
         align-items: center;
 

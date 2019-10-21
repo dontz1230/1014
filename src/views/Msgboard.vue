@@ -1,6 +1,15 @@
 <template>
     <div class="msgboard-container">
 
+        <div class="parallax-msg">
+            <div class="reserve-text">
+                <h1>您的餐後鼓勵 ｜</h1>
+                <br>
+                <h1>｜ 是我們努力的動力</h1>
+            </div>
+        </div>
+
+        
         <title-text>用餐分享</title-text>
 
         <img src="" alt="" class="msgimg">
@@ -144,9 +153,44 @@ export default {
             border: 1px solid salmon!important;
         }
 
+    .parallax-msg {
+        background-image: url('../assets/img/advice.jpg');
+        min-height: 500px; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index:-1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > .reserve-text {
+            z-index:3;
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            animation: textAnime 3s infinite ease-out;
+            
+            > h1 {
+                color:white;
+                text-shadow: -2px 2px 2px rgba(0,0,0,0.5);
+            }
+        }
+    }
+
+    @keyframes textAnime {
+                from {
+                    transform: translateY(-100px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0px);
+                    opacity: 1
+                }
+            }
+
     .msgboard-container {      
-        max-width: 1200px;
-        width: calc(100% - 40px);
+        width: 100%;
         margin:auto;
         padding:0;
         display: grid;
@@ -283,10 +327,46 @@ export default {
             border: 1px solid salmon!important;
         }
 
+        .parallax-msg {
+        background-image: url('../assets/img/advice.jpg');
+        min-height: 500px; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index:-1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > .reserve-text {
+            z-index:3;
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            animation: textAnime 3s infinite ease-out;
+            
+            > h1 {
+                color:white;
+                text-shadow: -2px 2px 2px rgba(0,0,0,0.5);
+            }
+        }
+    }
+
+    @keyframes textAnime {
+                from {
+                    transform: translateY(-100px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0px);
+                    opacity: 1
+                }
+            }
+
+
     .msgboard-container {      
-        max-width: 1200px;
-        width: calc(100% - 40px);
-        margin:auto;
+        width: 100%;
+        margin:0;
         padding:0;
         display: grid;
         grid-template-columns: 1fr;
@@ -414,7 +494,7 @@ export default {
 }
 
 /* 手機版本 */
-@media screen and (min-width: 320px) and (max-width: 568px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
     .error-label {
     color:  salmon;
 }
@@ -424,10 +504,82 @@ export default {
         border: 1px solid salmon!important;
     }
 
+.parallax-msg {
+        background-image: url('../assets/img/advice.jpg');
+        min-height: 500px; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index:-1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > .reserve-text {
+            z-index:3;
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            animation: textAnime 3s infinite ease-out;
+            
+            > h1 {
+                color:white;
+                text-shadow: -2px 2px 2px rgba(0,0,0,0.5);
+            }
+        }
+    }
+
+    @keyframes textAnime {
+                from {
+                    transform: translateY(-100px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0px);
+                    opacity: 1
+                }
+            }
+
+    .parallax-msg {
+        overflow: hidden;
+        background-image: url('../assets/img/advice.jpg');
+        min-height: 500px; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index:-1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > .reserve-text {
+            z-index:3;
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            animation: textAnime 3s infinite ease-out;
+            
+            > h1 {
+                color:white;
+                text-shadow: -2px 2px 2px rgba(0,0,0,0.5);
+            }
+        }
+    }
+
+    @keyframes textAnime {
+                from {
+                    transform: translateY(-100px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0px);
+                    opacity: 1
+                }
+            }
 
 .msgboard-container {      
-    max-width: 1200px;
-    width: calc(100% - 40px);
+    max-width: 100%;
+    width: 100%;
     margin:auto;
     padding:0;
     display: grid;

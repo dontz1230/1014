@@ -2,8 +2,8 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-
-
+import VueResource from 'vue-resource'
+Vue.use(VueResource);
 
 // import VueMaterial from 'element-ui';
 // import firebase from 'firebase'
@@ -18,6 +18,7 @@ import 'vue-material/dist/vue-material.css'
 // Vue.use(MdTabs)
 // Vue.use(MdDatepicker)
 Vue.use(VueMaterial)
+
 
 import vuelidate from 'vuelidate'
 Vue.use(vuelidate);
